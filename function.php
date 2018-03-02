@@ -123,13 +123,13 @@
    function rosariojmj_scripts() {
     wp_enqueue_style( 'rosariojmj', get_stylesheet_uri() );
 
-    wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array('rosariojmj'), false);
+    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array('rosariojmj'), false);
 
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans', array('rosariojmj'), false);
 
-    wp_enqueue_style( 'fontawesome-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', array('rosariojmj'), false);
+    wp_enqueue_style( 'fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', array('rosariojmj'), false);
 
-    wp_enqueue_style( 'custome-css', get_template_directory_uri() . '/css/master.css', array('rosariojmj'), false);
+    wp_enqueue_style( 'master', get_template_directory_uri() . '/css/master.css', array('rosariojmj'), false);
 
     /* ** scripts ** */
     wp_enqueue_script( 'jquery-js', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', '1.12.4', true);
