@@ -1,0 +1,322 @@
+/* CSS Document */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #1c8abf;
+  padding-top: 80px;
+}
+
+.navbar-default {
+  background-color:#ffffff !important;
+}
+
+.navbar h3 {
+  color: #ff0000;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.logo{
+  margin: auto;
+}
+
+.main {
+    margin: 8em 0 5em;
+}
+
+/* Estilo para el cuerpo del formulario*/
+/* Estilo para el encabezado espacio del formulario */
+.registro-header {
+    max-width: 50%;
+    margin: 0 auto;
+    margin: 0 auto;
+    background:#ffffff;
+    padding: 2em;
+    position: relative;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.registro-header h1 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 1.4em;
+    margin: 1em 0;
+    color: #003588;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #1c8abf;
+}
+
+.registro-header span {
+  color: #1c8abf;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.registro-header span:hover {
+  color: #ff0000;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px #f2f2f2 inset !important;
+}
+input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+}
+
+.input-group{
+	margin: 20px 0px;
+}
+
+.input-group-addon {
+    color: #009edf ;
+    font-size: 16px;
+}
+
+.btnEnviar {
+    text-transform: uppercase;
+    outline: 0;
+    background: #ff0000;
+    width: 30%;
+    border: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 1.0em;
+    cursor: pointer;
+}
+/*----fin main----*/
+
+/*---Estilos para el footer---*/
+.footer {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.enlace {
+    margin-top: 10px;
+}
+
+.sitio-jmj {
+	color: #fff;
+  font-size: 15px;
+	font-weight: 400;
+}
+
+.copyrigth {
+    font-size: 0.9em;
+    color: #fff;
+    padding-top: 1.25em;
+    margin: 0px;
+}
+
+.copyrigth a:hover {
+    color: #fff;
+}
+
+.copyrigth a {
+    color: #fff;
+}
+/*--fin footer--*/
+
+.msg{
+  background-color:#ffffff;
+  border:2px solid #1c8abf;
+  cursor:default;
+  display:none;
+  margin-top: 15px;
+  position:absolute;
+  text-align:left;
+  width:394px;
+  z-index:50;
+  padding: 25px 25px 20px;
+}
+
+
+/*Estilos para el responsive*/
+@media all and (min-width: 1440px) and (max-width: 1920px) {
+    .registro-header {
+        width: 16%;
+    }
+
+}
+
+@media(max-width:1366px){
+    .registro-header {
+        width: 50%;
+    }
+
+}
+
+@media(max-width:1280px){
+    .registro-header {
+        width: 50%;
+    }
+
+}
+
+@media(max-width:1080px){
+    .registro-header {
+        width: 50%;
+    }
+
+    .registro-header h1 {
+        font-size: 1.4em;
+    }
+
+}
+
+@media (max-width: 991px){
+    .navbar h3 {
+      font-size: 18px;
+    }
+
+    .registro-header {
+        width: 53%;
+    }
+
+    .registro-content input[type="text"] {
+        width: 88%;
+        font-size: .95em;
+    }
+
+    .registro-content input[type="email"] {
+        width: 88%;
+        font-size: .95em;
+    }
+
+    .registro-content input[type="submit"] {
+        font-size: 1.0em;
+    }
+
+    .main {
+        margin: 3em 0 5em;
+    }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-top: 120px;
+  }
+
+  #descripcion li h3{
+   text-align: center;
+   margin: auto 0;
+  }
+
+  .navbar h3 {
+    font-size: 16px;
+    margin-top: 2px;
+  }
+}
+
+@media (max-width: 640px){
+    .registro-header {
+        width: 68%;
+    }
+
+    .registro-content input[type="text"] {
+        width: 90%;
+        font-size: .95em;
+    }
+
+    .registro-content input[type="email"] {
+        width: 90%;
+        font-size: .95em;
+    }
+
+    .btnEnviar {
+        width: 50%;
+    }
+
+    .sitio-jmj {
+      font-size: 13px;
+    	font-weight: 400;
+    }
+}
+
+@media (max-width: 480px){
+  .navbar h3 {
+      font-size: 14px;
+      margin-top: 2px;
+    }
+
+    .registro-header {
+        width: 71%;
+        padding: 2.5em;
+    }
+
+    .btnEnviar {
+        width: 70%;
+    }
+
+    .registro-content input[type="submit"] {
+        font-size: 0.5em;
+        padding: .2em .2em;
+    }
+
+    .registro-content input[type="text"] {
+        width: 100%;
+    }
+
+    .registro-content input[type="email"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px){
+    .registro-header {
+        width: 77%;
+        padding: 1.5em;
+    }
+
+    .main {
+        margin: 2.5em 0 3em;
+    }
+    .footer {
+        text-align: center;
+        padding: 1em 0;
+    }
+
+    .btnEnviar {
+        width: 70%;
+    }
+
+    .registro-content input[type="submit"] {
+        font-size: 0.5em;
+        padding: .2em .2em;
+    }
+
+    .registro-content input[type="text"] {
+        width: 100%;
+    }
+
+    .registro-content input[type="email"] {
+        width: 100%;
+    }
+
+    .sitio-jmj {
+      font-size: 11px;
+      font-weight: 400;
+    }
+}
+/*Fin estilos para el responsive*/
