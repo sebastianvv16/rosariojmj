@@ -14,10 +14,6 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name='viewport' content='width=device-width, initial-scale=1'>
       <meta name='mobile-web-app-capable' content='yes'>
-      <!--<link id="bootstrap-css" rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" >
-      <link id="rosariojmj-css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-      <link id="fontawesome-css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link id="custom-css" rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/master.css"> -->
       <?php wp_head(); ?>
     </head>
     <body>
