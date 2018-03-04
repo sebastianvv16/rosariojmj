@@ -12,12 +12,6 @@
             <a href="https://www.panama2019.pa" class="sitio-jmj" target="_blank">Visita JMJ Panama 2019</a>
         </div>
 
-        <!--
-        <div id="copyrigth" class="copyrigth">
-            <span class="glyphicon glyphicon-copyright-mark">2018-2019</span>
-        </div>
-        -->
-
       </footer>
     </div>
   </div>

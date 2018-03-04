@@ -16,6 +16,20 @@
                 </div>
 
                 <div id="registroContent" class="registro-content">
+                  <?php
+            			if ( have_posts() ) :
+
+            				/* Start the Loop */
+            				while ( have_posts() ) : the_post();
+
+            					/*
+            					 * Include the content
+            					 */
+            					the_content();
+
+            				endwhile;
+            			else :
+                  ?>
                     <form id="registroForm"  action="" method="post" >
                         <div class="form-group input-group">
                           <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
@@ -38,6 +52,10 @@
                         </div>
                         <input type="hidden" name="" value=""/>
                     </form>
+                  <?php
+            			endif;
+            			?>
+
                 </div>
               </div>
             </div>

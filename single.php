@@ -1,29 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-      <title>Rosario JMJ</title>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name='viewport' content='width=device-width, initial-scale=1'>
-      <meta name='mobile-web-app-capable' content='yes'>
-      <link id="bootstrap-css" rel="stylesheet" href="css/bootstrap.min.css" >
-      <link id="rosariojmj-css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-      <link id="fontawesome-css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link id="custom-css" rel="stylesheet" href="css/master.css">
-    </head>
-
-    <body>
-          <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-              <div class="navbar-header">
-                <img src="img/logo.png" class="logo img-responsive" alt="Rosario JMJ">
-              </div>
-               <div id="encabezado" class="nav navbar-nav navbar-right">
-                  <ul id="descripcion" class="nav">
-                    <li><h3>Inscripción Rosario por la JMJ Panama 2019</h3></li>
-                  </ul>
-               </div>
-            </div>
-          </nav>
+<?php get_header(); ?>
 
         <div class="container clearfix">
           <div class="row">
@@ -41,6 +16,20 @@
                 </div>
 
                 <div id="registroContent" class="registro-content">
+                  <?php
+            			if ( have_posts() ) :
+
+            				/* Start the Loop */
+            				while ( have_posts() ) : the_post();
+
+            					/*
+            					 * Include the content
+            					 */
+            					the_content();
+
+            				endwhile;
+            			else :
+                  ?>
                     <form id="registroForm"  action="" method="post" >
                         <div class="form-group input-group">
                           <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
@@ -63,41 +52,13 @@
                         </div>
                         <input type="hidden" name="" value=""/>
                     </form>
+                  <?php
+            			endif;
+            			?>
+
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="row">
-            <div class="footer col-sm-12 col-md-12">
-              <footer role="contentinfo" style="text-align: center">
-
-                <div id="redes-sociales" class="redes-sociales col-xs-12 col-sm-12">
-                    <a href="" title="Facebook"><span class="fa-stack fa-lg"><i class="fa fa-facebook-f fa-stack-1x fa-inverse"></i></span></a>
-                    <a href="" title="Twitter"><span class="fa-stack fa-lg"><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a>
-                    <a href="" title="Instagram"><span class="fa-stack fa-lg"><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a>
-                </div>
-
-                <div id="sitio-jmj" class="enlace col-xs-12 col-sm-12">
-                    <a href="https://www.panama2019.pa" class="sitio-jmj" target="_blank">Visita JMJ Panama 2019</a>
-                </div>
-
-                <!--
-                <div id="copyrigth" class="copyrigth">
-                    <span class="glyphicon glyphicon-copyright-mark">2018-2019</span>
-                </div>
-                -->
-
-              </footer>
-            </div>
-          </div>
-        </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js">
-
-    </script>
-
-    </body>
-</html>
+<?php get_footer(); ?>
