@@ -50,6 +50,7 @@
  		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
  		 */
  		add_theme_support( 'post-thumbnails' );
+    the_post_thumbnail( );
     set_post_thumbnail_size( 825, 510, true );
 
  		// This theme uses wp_nav_menu() in one location.
@@ -90,17 +91,24 @@
  			'flex-height' => true,
  		) );
 
+    $args = array(
+	     'width'         => 980,
+	     'height'        => 60,
+	     'default-image' => get_template_directory_uri() . '/img/logo.png',
+	     'uploads'       => true,
+    );
+    add_theme_support( 'custom-header', $args );
+
     // Setup the WordPress core custom background feature.
 
     /*
      * This theme styles the visual editor to resemble the theme style,
      * specifically font, colors, icons, and column width.
      */
-    //add_editor_style( array( 'css/editor-style.css', 'genericons/genericons.css', rosario_fonts_url() ) );
+    add_editor_style('');
 
     // Indicate widget sidebars can use selective refresh in the Customizer.
     add_theme_support( 'customize-selective-refresh-widgets' );
-
  	}
  endif;
  add_action( 'after_setup_theme', 'rosariojmj_setup' );

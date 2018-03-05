@@ -26,6 +26,7 @@
             					 * Include the content
             					 */
             					the_content();
+                      the_tags();
 
                       // Previous/next page navigation.
                 			the_posts_pagination( array(

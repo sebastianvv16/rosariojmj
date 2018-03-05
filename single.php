@@ -25,7 +25,13 @@
             					/*
             					 * Include the content
             					 */
-            					the_content();
+            					//the_content();
+                      //the_tags();
+                      get_template_part( 'content-single', get_post_format() );
+
+                    	if ( comments_open() || get_comments_number() ) :
+                    	  comments_template();
+                    	endif;
 
                       // Previous/next page navigation.
                 			the_posts_pagination( array(

@@ -10,3 +10,66 @@ License URI: LICENSE
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 Text Domain: rosariojmj
 */
+
+  .rtl {}
+  .home {}
+  .blog {}
+  .archive {}
+  .date {}
+  .search {}
+  .paged {}
+  .attachment {}
+  .error404 {}
+  .single postid-(id) {}
+  .author {}
+  .category {}
+  .tag {}
+  .page-parent {}
+  .page-child parent-pageid-(id) {}
+  .page-template page-template-(template file name) {}
+  .search-results {}
+  .search-no-results {}
+  .logged-in {}
+  .paged () {}
+
+  .post-id {}
+  .post {}
+  .page {}
+  .attachment {}
+  .sticky {}
+  .hentry {}
+  .category-misc {}
+  .category-example {}
+  .tag-news {}
+  .tag-wordpress {}
+  .tag-markup {}
+
+  .entry-content img {}
+  .alignleft, img.alignleft {}
+  .alignright, img.alignright {}
+  .aligncenter, img.aligncenter {}
+  .alignnone, img.alignnone {}
+
+  .wp-caption {}
+  .wp-caption img {}
+  .wp-caption p.wp-caption-text {}
+
+  .wp-smiley {}
+
+  blockquote.left {}
+  blockquote.right {}
+
+  .gallery dl {}
+  .gallery dt {}
+  .gallery dd {}
+  .gallery dl a {}
+  .gallery dl img {}
+  .gallery-caption {}
+
+  .size-full {}
+  .size-large {}
+  .size-medium {}
+  .size-thumbnail {}
+
+  .screen-reader-text {}
+  .bypostauthor {}
