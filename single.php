@@ -27,6 +27,13 @@
             					 */
             					the_content();
 
+                      // Previous/next page navigation.
+                			the_posts_pagination( array(
+                				'prev_text'          => __( 'Previous page', 'rosariojmj' ),
+                				'next_text'          => __( 'Next page', 'rosariojmj' ),
+                				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'rosariojmj' ) . ' </span>',
+                			) );
+
             				endwhile;
             			else :
                   ?>

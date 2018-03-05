@@ -7,6 +7,15 @@
  * @package rosariojmj
  */
 
+ /**
+  * Set the content width based on the theme's design and stylesheet.
+  *
+  * @since rosariojmj
+  */
+ if ( ! isset( $content_width ) ) {
+ 	$content_width = 900;
+ }
+
  if ( ! function_exists( 'rosariojmj_setup' ) ) :
  	/**
  	 * Sets up theme defaults and registers support for various WordPress features.
@@ -22,7 +31,7 @@
  		 * If you're building a theme based on rosariojmj, use a find and replace
  		 * to change 'rosariojmj' to the name of your theme in all the template files.
  		 */
- 		load_theme_textdomain( 'rosariojmj', get_template_directory() . '/languages' );
+ 		load_theme_textdomain( 'rosariojmj');
 
  		// Add default posts and comments RSS feed links to head.
  		add_theme_support( 'automatic-feed-links' );
@@ -41,6 +50,7 @@
  		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
  		 */
  		add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 825, 510, true );
 
  		// This theme uses wp_nav_menu() in one location.
  		register_nav_menus( array(
@@ -79,6 +89,18 @@
  			'flex-width'  => true,
  			'flex-height' => true,
  		) );
+
+    // Setup the WordPress core custom background feature.
+
+    /*
+     * This theme styles the visual editor to resemble the theme style,
+     * specifically font, colors, icons, and column width.
+     */
+    //add_editor_style( array( 'css/editor-style.css', 'genericons/genericons.css', rosario_fonts_url() ) );
+
+    // Indicate widget sidebars can use selective refresh in the Customizer.
+    add_theme_support( 'customize-selective-refresh-widgets' );
+
  	}
  endif;
  add_action( 'after_setup_theme', 'rosariojmj_setup' );
@@ -135,7 +157,7 @@
     /* ** scripts ** */
     wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', '1.12.4', true);
 
-    wp_enqueue_script( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', '3.3.7', true);
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', '3.3.7', true);
 
     wp_enqueue_script( 'validate', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js', '1.17.0', true);
 
