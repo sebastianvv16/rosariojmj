@@ -1,13 +1,17 @@
 <form id="registroForm" method="post" role="form" autocomplete="off">
-    <div class="form-group input-group">
-      <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-      <input id="name" name="name" type="text" class="form-control" data-rule-required="true" data-msg-required="Campo obligatorio" placeholder="Ingrese su nombre">
+    <div class="form-group">
+      <div class=" input-group">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+        <input id="name" name="name" type="text" class="form-control" data-rule-required="true" data-msg-required="Campo obligatorio" placeholder="Ingrese su nombre">
+      </div>
       <span class="help-block" id="error"></span>
     </div>
 
-    <div class="form-group input-group">
-      <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-      <input id="email" name="email" type="email" class="form-control" data-rule-required="true" data-msg-required="Campo obligatorio" aria-describedby="emailHelp" placeholder="Ingrese su email">
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+        <input id="email" name="email" type="email" class="form-control" data-rule-required="true" data-msg-required="Campo obligatorio" aria-describedby="emailHelp" placeholder="Ingrese su email">
+      </div>
       <span class="help-block" id="error"></span>
     </div>
 
