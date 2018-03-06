@@ -43,28 +43,7 @@
             				endwhile;
             			else :
                   ?>
-                    <form id="registroForm"  action="" method="post" >
-                        <div class="form-group input-group">
-                          <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
-                          <input id="name" name="name" type="text" class="form-control" data-rule-required="true" data-msg-required="Campo obligatorio" placeholder="Ingrese su nombre">
-                        </div>
-
-                        <div class="form-group input-group">
-                          <span class="input-group-addon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
-                          <input id="email" name="email" type="email" class="form-control" data-rule-required="true" data-msg-required="Campo obligatorio" aria-describedby="emailHelp" placeholder="Ingrese su email">
-                        </div>
-
-                        <div id="captcha" class="form-group">
-                          <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
-                          <div class="g-recaptcha" data-theme="light" data-sitekey="6LcU9D0UAAAAACA7pcrfZpWaDPvjwhoqA9QIi1h4"></div>
-                        </div>
-
-                        <div class="text-center form-group">
-                          <button id="submit_btn" type="submit" name="submit_form" value="submit" class="btnEnviar btn btn-primary btn-lg">
-                          <strong>Enviar</strong></button>
-                        </div>
-                        <input type="hidden" name="" value=""/>
-                    </form>
+                    <?php get_template_part( 'template-parts/content', 'form' ); ?>
                   <?php
             			endif;
             			?>

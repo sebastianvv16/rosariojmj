@@ -1,5 +1,6 @@
-$('document').ready(function()
-{
+// JavaScript Validation For Registration Page
+
+jQuery(document).ready(function($){
    // name validation
     var nameregex = /^[a-zA-Z ]+$/;
 
@@ -8,13 +9,13 @@ $('document').ready(function()
    });
 
    // valid email pattern
-   var eregex = /^([a-zA-Z0-9_.-+])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
+   var eregex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
    $.validator.addMethod("validemail", function( value, element ) {
        return this.optional( element ) || eregex.test( value );
    });
 
-   $("#register-form").validate({
+   $("#registroForm").validate({
 
     rules:
     {
@@ -27,35 +28,18 @@ $('document').ready(function()
      required: true,
      validemail: true
     },
-    password: {
-     required: true,
-     minlength: 8,
-     maxlength: 15
-    },
-    cpassword: {
-     required: true,
-     equalTo: '#password'
-    },
      },
      messages:
      {
     name: {
-     required: "Please Enter User Name",
-     validname: "Name must contain only alphabets and space",
-     minlength: "Your Name is Too Short"
+     required: "Por favor ingrese su nombre",
+     validname: "EL nombre solo debe contener letras alfabeticas y espacio",
+     minlength: "Su nombre es muy corto"
        },
        email: {
-       required: "Please Enter Email Address",
-       validemail: "Enter Valid Email Address"
-        },
-    password:{
-     required: "Please Enter Password",
-     minlength: "Password at least have 8 characters"
-     },
-    cpassword:{
-     required: "Please Retype your Password",
-     equalTo: "Password Did not Match !"
-     }
+       required: "Por favor ingrese su email",
+       validemail: "Debe ingresar un email valido"
+        }
      },
      errorPlacement : function(error, element) {
      $(element).closest('.form-group').find('.help-block').html(error.html());
@@ -73,4 +57,4 @@ $('document').ready(function()
      alert('ok');
                 }
      });
- })
+ });
